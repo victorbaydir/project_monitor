@@ -1,0 +1,27 @@
+<form [formGroup]="formGroup" (ngSubmit)="save()">
+    <h2>Criar Usuário</h2>
+
+    <div>
+        <div>
+            <label for="name">Nome Completo</label>
+            <input formControlName="name" type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="birth">Data de Nascimento</label>
+            <input formControlName="birth" type="date" name="birth" id="birth">
+        </div>
+
+        <div>
+            <label for="email">Seu Melhor Email</label>
+            <input formControlName="email" type="text" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="password">Senha</label>
+            <input formControlName="password" type="password" name="password" id="password">
+        </div>
+
+        <button type="submit">Salvar</button>
+    </div>
+</form>

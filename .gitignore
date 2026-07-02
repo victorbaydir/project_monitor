@@ -1,28 +1,74 @@
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
-.angular/
+#####################################
+# ANGULAR
+#####################################
 
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
+# Dependências
+/frontend/node_modules/
 
-# Environment files
-/.env
+# Build
+/frontend/dist/
+/frontend/out-tsc/
+/frontend/.angular/
+/frontend/.ng/
+/frontend/coverage/
+/frontend/tmp/
 
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
+# Cache
 *.tsbuildinfo
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+#####################################
+# LARAVEL
+#####################################
+
+# Dependências
+/backend/vendor/
+
+# Ambiente
+/backend/.env
+/backend/.env.*
+
+# Cache e logs
+/backend/storage/logs/*
+/backend/storage/framework/cache/*
+/backend/storage/framework/sessions/*
+/backend/storage/framework/views/*
+/backend/bootstrap/cache/*
+
+# Arquivos gerados
+/backend/public/storage
+
+#####################################
+# GERAL
+#####################################
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de log
+*.log
+
+# Cobertura de testes
+coverage/
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Locks (opcional)
+# Descomente se realmente não quiser versioná-los.
+# package-lock.json
+# yarn.lock
+# composer.lock

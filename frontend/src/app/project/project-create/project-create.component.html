@@ -1,0 +1,30 @@
+<form [formGroup]="formGroup" (ngSubmit)="save()">
+    <h2>Create Project</h2>
+
+    <div>
+        <div>
+            <label>Name</label>
+            <input formControlName="name" type="text">
+        </div>
+
+        <div>
+            <label>Key</label>
+            <input formControlName="key" type="text">
+        </div>
+
+        <div>
+            <label>Description</label>
+            <textarea formControlName="description"></textarea>
+        </div>
+
+        <div>
+            <label>Status</label>
+            <select formControlName="status">
+                <option [ngValue]="true">Active</option>
+                <option [ngValue]="false">Inactive</option>
+            </select>
+        </div>
+
+        <button type="submit">Save</button>
+    </div>
+</form>

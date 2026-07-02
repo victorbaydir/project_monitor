@@ -1,0 +1,40 @@
+<div>
+    <h2>Projetos</h2>
+
+    <div>
+        <label>Nome do Projeto</label>
+        <input type="text" placeholder="Type name to filter..." [(ngModel)]="searchTerm" (keyup.enter)="search()">
+        <button type="button" (click)="search()">Search</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Key</th>
+                <th>Status</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let project of filteredProjects()">
+                <td>{{ project.id }}</td>
+                <td>{{ project.name }}</td>
+                <td>{{ project.key }}</td>
+                <td>{{ project.status ? 'Active' : 'Inactive' }}</td>
+                <td>
+                    <a [routerLink]="['/projects/edit', project.id]">Edit</a>
+                    <button type="button" (click)="deleteProject(project.id)">Delete</button>
+                </td>
+            </tr>
+            <tr *ngIf="filteredProjects().length === 0">
+                <td colspan="5">No projects found.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <button type="button" (click)="navigateToCreate()">Novo Projeto</button>
+    </div>
+</div>
